@@ -15,6 +15,17 @@
       color: #f5f5f5;
     }
 
+    /* ===== ANIMACJE ===== */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* ===== TOP BAR ===== */
     .topbar {
       position: fixed;
@@ -27,6 +38,7 @@
       background-color: rgba(0,0,0,0.95);
       border-bottom: 1px solid #1f1f1f;
       z-index: 100;
+      animation: fadeDown 0.8s ease forwards;
     }
 
     .logo-box {
@@ -55,10 +67,18 @@
     .hero-text {
       font-size: 1.4rem;
       margin-bottom: 36px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .cta-wrap {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 1.2s ease forwards;
     }
 
     .cta {
-      display: inline-block;
       background-color: #d4af37;
       color: #000;
       padding: 16px 42px;
@@ -75,7 +95,7 @@
       box-shadow: 0 12px 30px rgba(212,175,55,0.45);
     }
 
-    /* ===== SECTIONS ===== */
+    /* ===== SEKCJE ===== */
     section {
       max-width: 1100px;
       margin: auto;
@@ -87,6 +107,7 @@
       color: #d4af37;
       margin-bottom: 45px;
       letter-spacing: 0.5px;
+      animation: fadeUp 0.9s ease forwards;
     }
 
     .grid {
@@ -96,17 +117,16 @@
     }
 
     .box {
-      background:
-        linear-gradient(180deg, #1b1b1b, #121212);
+      background: linear-gradient(180deg, #1b1b1b, #121212);
       padding: 32px 26px;
       border-radius: 14px;
       border: 1px solid #2a2a2a;
       text-align: center;
       position: relative;
       transition: all 0.35s ease;
+      animation: fadeUp 0.9s ease forwards;
     }
 
-    /* ZŁOTA LINIA */
     .box::before {
       content: "";
       position: absolute;
@@ -129,13 +149,16 @@
     .area {
       text-align: center;
       font-size: 1.15rem;
+      animation: fadeUp 0.9s ease forwards;
     }
 
+    /* ===== STOPKA ===== */
     footer {
       background-color: #000;
       text-align: center;
       padding: 45px 20px;
       border-top: 1px solid #1f1f1f;
+      animation: fadeUp 1s ease forwards;
     }
 
     footer a {
@@ -177,9 +200,10 @@
     Ruda Śląska i okolice
   </div>
 
-  <a href="tel:721440791" class="cta">
-    📞 Zadzwoń: 721 440 791
-  </a>
+  <div class="cta-wrap">
+    <a href="tel:721440791" class="cta">📞 721 440 791</a>
+    <a href="tel:533844331" class="cta">📞 533 844 331</a>
+  </div>
 </header>
 
 <section>
@@ -208,7 +232,10 @@
 </section>
 
 <footer>
-  <p><a href="tel:721440791">📞 721 440 791</a></p>
+  <p>
+    <a href="tel:721440791">📞 721 440 791</a><br>
+    <a href="tel:533844331">📞 533 844 331</a>
+  </p>
   <p><a href="mailto:nadbertmeble@gmail.com">✉️ nadbertmeble@gmail.com</a></p>
   <p class="small">Pn–Pt: popołudnia • Weekend: cały dzień • 7 dni w tygodniu</p>
 </footer>
