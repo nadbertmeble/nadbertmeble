@@ -3,76 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NADBERT MEBLE – Montaż mebli</title>
+  <title>NADBERT MEBLE – Skręcanie i montaż mebli</title>
+  <meta name="description" content="NADBERT MEBLE – skręcanie i montaż mebli u klienta. Ruda Śląska, Zabrze, Chorzów, Bytom, Katowice, Gliwice.">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0e0e0e;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0e0e0e;
       color: #f5f5f5;
+      line-height: 1.6;
     }
+
     header {
-      text-align: center;
-      padding: 60px 20px;
       background: linear-gradient(135deg, #000000, #1a1a1a);
+      padding: 70px 20px;
+      text-align: center;
     }
+
     header img {
-      max-width: 150px;
-      margin-bottom: 15px;
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
     }
-    header h1 {
+
+    h1 {
+      font-size: 2.3rem;
+      margin: 0 0 10px 0;
       color: #d4af37;
-      font-size: 2.2rem;
-      margin: 0;
+      letter-spacing: 1px;
     }
-    .cta-btn {
+
+    .subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .cta {
       display: inline-block;
-      margin-top: 10px;
-      padding: 12px 25px;
-      background: #d4af37;
+      background-color: #d4af37;
       color: #000;
-      text-decoration: none;
+      padding: 15px 32px;
       font-weight: bold;
+      text-decoration: none;
       border-radius: 5px;
+      font-size: 1.05rem;
     }
+
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
+
     h2 {
       color: #d4af37;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      text-align: center;
     }
-    .features, .services {
+
+    .grid {
       display: grid;
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
+
     .box {
-      background: #1a1a1a;
-      padding: 15px;
+      background-color: #1a1a1a;
+      padding: 22px;
       border-radius: 6px;
       border: 1px solid #2a2a2a;
-    }
-    footer {
       text-align: center;
-      padding: 25px 20px;
-      background: #000;
+    }
+
+    .area {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .small {
       font-size: 0.9rem;
+      color: #cccccc;
+      margin-top: 10px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
+  <!-- LOGO -->
   <img src="logo.png" alt="Nadbert Meble logo">
+
   <h1>NADBERT MEBLE</h1>
-  <a href="tel:721440791" class="cta-btn">Zadzwoń: 721 440 791</a>
+  <div class="subtitle">
+    Skręcanie i montaż mebli u klienta<br>
+    Ruda Śląska i okolice
+  </div>
+
+  <a class="cta" href="tel:721440791">Zadzwoń: 721 440 791</a>
 </header>
 
 <section>
-  <h2>Dlaczego my?</h2>
-  <div class="features">
+  <h2>Dlaczego warto nas wybrać?</h2>
+  <div class="grid">
     <div class="box">2 monterów w standardzie</div>
     <div class="box">Szybkie terminy realizacji</div>
     <div class="box">Punktualność</div>
@@ -81,19 +129,39 @@
 </section>
 
 <section>
-  <h2>Usługi</h2>
-  <div class="services">
-    <div class="box">Skręcanie mebli z paczek</div>
+  <h2>Zakres usług</h2>
+  <div class="grid">
+    <div class="box">Skręcanie mebli z paczek<br>(IKEA, JYSK, Agata, BRW i inne)</div>
     <div class="box">Montaż szaf i garderób</div>
-    <div class="box">Montaż biurek, łóżek, komód</div>
+    <div class="box">Montaż biurek, łóżek, komód, regałów</div>
     <div class="box">Wnoszenie mebli</div>
   </div>
-  <p style="font-size:0.9rem;">Nie wykonujemy wiercenia w ścianach ani montażu wiszących mebli.</p>
+  <p class="small" style="text-align:center;">
+    Nie wykonujemy wiercenia w ścianach ani montażu mebli wiszących.
+  </p>
+</section>
+
+<section class="area">
+  <h2>Obszar działania</h2>
+  <p>Ruda Śląska oraz:</p>
+  <p>Zabrze • Chorzów • Bytom • Katowice • Gliwice</p>
+</section>
+
+<section>
+  <h2>Szybka wycena</h2>
+  <div class="box">
+    1. Wyślij SMS lub e-mail<br>
+    2. Dodaj zdjęcie instrukcji lub link do mebla<br>
+    3. Podaj lokalizację<br><br>
+    Otrzymasz jasną wycenę przed realizacją.
+  </div>
 </section>
 
 <footer>
-  📞 721 440 791 &nbsp;&nbsp; ✉️ nadbertmeble@gmail.com<br>
-  Pn–Pt: popołudnia • Weekend: cały dzień • 7 dni w tygodniu
+  <p><a href="tel:721440791">📞 721 440 791</a></p>
+  <p><a href="mailto:nadbertmeble@gmail.com">✉️ nadbertmeble@gmail.com</a></p>
+  <p class="small">Pn–Pt: popołudnia • Weekend: cały dzień • 7 dni w tygodniu</p>
+  <p class="small">NADBERT MEBLE ©</p>
 </footer>
 
 </body>
