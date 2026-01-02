@@ -3,141 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Skręcanie i montaż mebli Ruda Śląska | NADBERT MEBLE</title>
+<meta name="description" content="Profesjonalne skręcanie i montaż mebli u klienta – Ruda Śląska i okolice. Szybko, dokładnie, dwa numery kontaktowe.">
 
 <style>
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#0e0e0e;
-  color:#f5f5f5;
+/* ===== GLOBAL STYLES ===== */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0e0e0e;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+/* ===== TOP NAVBAR ===== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  padding: 14px 26px;
+  border-bottom: 1px solid #1f1f1f;
+  z-index: 200;
+}
+.logo-box {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg,#d4af37,#9c7c19);
+  margin-right: 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(212,175,55,0.5);
+}
+.brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #d4af37;
+}
+/* ===== HERO / HEADER ===== */
+header {
+  text-align: center;
+  padding: 160px 20px 120px;
+  background: radial-gradient(circle at top, #111, #000);
+}
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #d4af37;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  color: #ddd;
+}
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.cta {
+  background-color: #d4af37;
+  color: #000;
+  padding: 14px 38px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.cta.fb {
+  background-color: #1877f2;
+  color: #fff;
+}
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-.topbar{
-  position:fixed;
-  top:0; left:0;
-  width:100%;
-  background:#000;
-  display:flex;
-  align-items:center;
-  padding:14px 24px;
-  border-bottom:1px solid #222;
-  z-index:100;
+/* ===== SECTIONS ===== */
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  color: #d4af37;
+  margin-bottom: 30px;
 }
 
-.logo-box{
-  width:34px;
-  height:34px;
-  background:linear-gradient(135deg,#d4af37,#9c7c19);
-  margin-right:12px;
-  border-radius:4px;
+/* ===== GRID BOXES ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 26px;
+}
+.box {
+  background: linear-gradient(180deg, #1a1a1a, #111);
+  padding: 26px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+.box:hover {
+  transform: translateY(-6px);
+  border-color: #d4af37;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
 }
 
-.brand{
-  color:#d4af37;
-  font-weight:bold;
-  letter-spacing:1px;
+/* ===== PROCESS STEPS ===== */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.step-box {
+  flex: 1 1 200px;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  text-align: center;
+}
+.step-box:hover {
+  border-color: #d4af37;
 }
 
-header{
-  padding:150px 20px 110px;
-  text-align:center;
-  background:radial-gradient(circle at top,#1a1a1a,#000);
+/* ===== SOCIAL ===== */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.hero-text{
-  font-size:1.4rem;
-  margin-bottom:35px;
+/* ===== FOOTER ===== */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 45px 20px;
+  border-top: 1px solid #222;
+}
+footer a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.cta-wrap{
-  display:flex;
-  gap:16px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.cta{
-  background:#d4af37;
-  color:#000;
-  padding:16px 40px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-.cta.fb{
-  background:#1877f2;
-  color:#fff;
-}
-
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:90px 20px;
-}
-
-h2{
-  text-align:center;
-  color:#d4af37;
-  margin-bottom:40px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:24px;
-}
-
-.box{
-  background:#151515;
-  padding:30px;
-  border-radius:12px;
-  border:1px solid #2a2a2a;
-  text-align:center;
-}
-
-.box:hover{
-  border-color:#d4af37;
-}
-
-.area{
-  text-align:center;
-  font-size:1.15rem;
-}
-
-.social{
-  display:flex;
-  gap:16px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:30px;
-}
-
-footer{
-  background:#000;
-  text-align:center;
-  padding:45px 20px;
-  border-top:1px solid #222;
-}
-
-footer a{
-  color:#d4af37;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-@media(max-width:600px){
-  header{padding-top:140px}
-  .hero-text{font-size:1.2rem}
+/* ===== MOBILE ===== */
+@media (max-width:600px) {
+  .hero-title { font-size: 2rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+  .steps { flex-direction: column; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
+<!-- TOPBAR -->
 <div class="topbar">
   <div class="logo-box"></div>
   <div class="brand">NADBERT MEBLE</div>
@@ -145,27 +179,24 @@ footer a{
 
 <!-- HERO -->
 <header>
-  <div class="hero-text">
-    Skręcanie i montaż mebli u klienta<br>
-    Ruda Śląska i okolice
-  </div>
+  <div class="hero-title">Profesjonalny montaż mebli</div>
+  <div class="hero-subtitle">Skręcanie i montaż mebli u klienta – Ruda Śląska i okolice</div>
 
-  <div class="cta-wrap">
+  <div class="cta-group">
     <a href="tel:721440791" class="cta">📞 721 440 791</a>
     <a href="tel:533844331" class="cta">📞 533 844 331</a>
-    <a href="https://www.facebook.com/profile.php?id=61585779969679"
-       target="_blank" class="cta fb">📘 Facebook</a>
+    <a href="https://www.facebook.com/profile.php?id=61585779969679" target="_blank" class="cta fb">📘 Facebook</a>
   </div>
 </header>
 
-<!-- DLACZEGO -->
+<!-- DLACZEGO MY -->
 <section>
 <h2>Dlaczego warto nas wybrać?</h2>
 <div class="grid">
-  <div class="box">2 monterów w standardzie</div>
-  <div class="box">Szybkie terminy</div>
-  <div class="box">Punktualność</div>
-  <div class="box">Czysto po montażu</div>
+  <div class="box">👥 Zawsze 2 monterów w standardzie</div>
+  <div class="box">⚡ Szybkie terminy realizacji</div>
+  <div class="box">📍 Punktualność i porządek</div>
+  <div class="box">🧼 Czysto po montażu</div>
 </div>
 </section>
 
@@ -173,39 +204,45 @@ footer a{
 <section>
 <h2>Zakres usług</h2>
 <div class="grid">
-  <div class="box">Skręcanie mebli z paczek (IKEA, JYSK, Agata)</div>
-  <div class="box">Montaż szaf i garderób</div>
-  <div class="box">Montaż biurek, łóżek, komód</div>
-  <div class="box">Wnoszenie mebli</div>
+  <div class="box">📦 Skręcanie mebli z paczek (IKEA, JYSK, Agata)</div>
+  <div class="box">🚪 Montaż szaf i garderób</div>
+  <div class="box">🛏️ Montaż łóżek, komód</div>
+  <div class="box">💪 Wnoszenie mebli</div>
 </div>
 
-<!-- SEO TEXT -->
-<p style="max-width:900px;margin:40px auto 0;text-align:center;color:#ccc;">
+<p style="max-width:900px; margin:40px auto 0; text-align:center; color:#ccc;">
 NADBERT MEBLE oferuje skręcanie i montaż mebli u klienta w Rudzie Śląskiej i okolicach.
 Montujemy meble z paczek IKEA, JYSK i innych sklepów, w tym szafy, garderoby,
 biurka, łóżka i komody. Obsługujemy również Zabrze, Chorzów, Bytom, Katowice i Gliwice.
 </p>
 </section>
 
-<!-- OBSZAR -->
-<section class="area">
+<!-- OBSZAR DZIAŁANIA -->
+<section>
 <h2>Obszar działania</h2>
-<p>Ruda Śląska • Zabrze • Chorzów • Bytom • Katowice • Gliwice</p>
+<p style="text-align:center;">Ruda Śląska • Zabrze • Chorzów • Bytom • Katowice • Gliwice</p>
 </section>
 
-<!-- FACEBOOK -->
+<!-- JAK DZIAŁAMY -->
+<section>
+<h2>Jak działamy</h2>
+<div class="steps">
+  <div class="step-box">📸 Wyślij zdjęcie instrukcji / modelu</div>
+  <div class="step-box">📅 Ustalamy dogodny termin</div>
+  <div class="step-box">🔧 Montujemy dokładnie i szybko</div>
+  <div class="step-box">🧹 Czysto po zakończeniu</div>
+</div>
+</section>
+
+<!-- FACEBOOK / SOCIAL -->
 <section>
 <h2>Zaobserwuj nas na Facebooku</h2>
-<p style="text-align:center;max-width:700px;margin:auto;">
+<p style="text-align:center; max-width:700px; margin:auto;">
 Publikujemy realizacje, wolne terminy i aktualności.
 </p>
-
 <div class="social">
-  <a href="https://www.facebook.com/profile.php?id=61585779969679"
-     target="_blank" class="cta fb">👍 Zaobserwuj</a>
-
-  <a href="https://m.me/61585779969679"
-     target="_blank" class="cta fb">💬 Napisz do nas</a>
+  <a href="https://www.facebook.com/profile.php?id=61585779969679" target="_blank" class="cta fb">👍 Zaobserwuj</a>
+  <a href="https://m.me/61585779969679" target="_blank" class="cta fb">💬 Napisz do nas</a>
 </div>
 </section>
 
