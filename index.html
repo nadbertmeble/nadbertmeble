@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NADBERT MEBLE – Montaż mebli</title>
+
+<title>Skręcanie i montaż mebli Ruda Śląska | NADBERT MEBLE</title>
 
 <style>
 body{
@@ -12,9 +13,10 @@ body{
   background:#0e0e0e;
   color:#f5f5f5;
 }
+
 .topbar{
   position:fixed;
-  top:0;left:0;
+  top:0; left:0;
   width:100%;
   background:#000;
   display:flex;
@@ -23,43 +25,71 @@ body{
   border-bottom:1px solid #222;
   z-index:100;
 }
+
 .logo-box{
-  width:34px;height:34px;
+  width:34px;
+  height:34px;
   background:linear-gradient(135deg,#d4af37,#9c7c19);
   margin-right:12px;
   border-radius:4px;
 }
-.brand{color:#d4af37;font-weight:bold;letter-spacing:1px}
+
+.brand{
+  color:#d4af37;
+  font-weight:bold;
+  letter-spacing:1px;
+}
 
 header{
   padding:150px 20px 110px;
   text-align:center;
   background:radial-gradient(circle at top,#1a1a1a,#000);
 }
-.hero-text{font-size:1.4rem;margin-bottom:35px}
 
-.cta-wrap{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero-text{
+  font-size:1.4rem;
+  margin-bottom:35px;
+}
+
+.cta-wrap{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
 .cta{
-  background:#d4af37;color:#000;
+  background:#d4af37;
+  color:#000;
   padding:16px 40px;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
 }
-.cta.fb{background:#1877f2;color:#fff}
+
+.cta.fb{
+  background:#1877f2;
+  color:#fff;
+}
 
 section{
   max-width:1100px;
   margin:auto;
   padding:90px 20px;
 }
-h2{text-align:center;color:#d4af37;margin-bottom:40px}
+
+h2{
+  text-align:center;
+  color:#d4af37;
+  margin-bottom:40px;
+}
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:24px;
 }
+
 .box{
   background:#151515;
   padding:30px;
@@ -67,11 +97,23 @@ h2{text-align:center;color:#d4af37;margin-bottom:40px}
   border:1px solid #2a2a2a;
   text-align:center;
 }
-.box:hover{border-color:#d4af37}
 
-.area{text-align:center;font-size:1.15rem}
+.box:hover{
+  border-color:#d4af37;
+}
 
-.social{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.area{
+  text-align:center;
+  font-size:1.15rem;
+}
+
+.social{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
 
 footer{
   background:#000;
@@ -79,7 +121,12 @@ footer{
   padding:45px 20px;
   border-top:1px solid #222;
 }
-footer a{color:#d4af37;text-decoration:none;font-weight:bold}
+
+footer a{
+  color:#d4af37;
+  text-decoration:none;
+  font-weight:bold;
+}
 
 @media(max-width:600px){
   header{padding-top:140px}
@@ -90,23 +137,28 @@ footer a{color:#d4af37;text-decoration:none;font-weight:bold}
 
 <body>
 
+<!-- TOP BAR -->
 <div class="topbar">
   <div class="logo-box"></div>
   <div class="brand">NADBERT MEBLE</div>
 </div>
 
+<!-- HERO -->
 <header>
   <div class="hero-text">
     Skręcanie i montaż mebli u klienta<br>
     Ruda Śląska i okolice
   </div>
+
   <div class="cta-wrap">
     <a href="tel:721440791" class="cta">📞 721 440 791</a>
     <a href="tel:533844331" class="cta">📞 533 844 331</a>
-    <a href="https://www.facebook.com/profile.php?id=61585779969679" target="_blank" class="cta fb">📘 Facebook</a>
+    <a href="https://www.facebook.com/profile.php?id=61585779969679"
+       target="_blank" class="cta fb">📘 Facebook</a>
   </div>
 </header>
 
+<!-- DLACZEGO -->
 <section>
 <h2>Dlaczego warto nas wybrać?</h2>
 <div class="grid">
@@ -117,6 +169,7 @@ footer a{color:#d4af37;text-decoration:none;font-weight:bold}
 </div>
 </section>
 
+<!-- ZAKRES -->
 <section>
 <h2>Zakres usług</h2>
 <div class="grid">
@@ -125,30 +178,46 @@ footer a{color:#d4af37;text-decoration:none;font-weight:bold}
   <div class="box">Montaż biurek, łóżek, komód</div>
   <div class="box">Wnoszenie mebli</div>
 </div>
+
+<!-- SEO TEXT -->
+<p style="max-width:900px;margin:40px auto 0;text-align:center;color:#ccc;">
+NADBERT MEBLE oferuje skręcanie i montaż mebli u klienta w Rudzie Śląskiej i okolicach.
+Montujemy meble z paczek IKEA, JYSK i innych sklepów, w tym szafy, garderoby,
+biurka, łóżka i komody. Obsługujemy również Zabrze, Chorzów, Bytom, Katowice i Gliwice.
+</p>
 </section>
 
+<!-- OBSZAR -->
 <section class="area">
 <h2>Obszar działania</h2>
 <p>Ruda Śląska • Zabrze • Chorzów • Bytom • Katowice • Gliwice</p>
 </section>
 
+<!-- FACEBOOK -->
 <section>
 <h2>Zaobserwuj nas na Facebooku</h2>
-<p style="text-align:center;max-width:700px;margin:auto">
+<p style="text-align:center;max-width:700px;margin:auto;">
 Publikujemy realizacje, wolne terminy i aktualności.
 </p>
+
 <div class="social">
-  <a href="https://www.facebook.com/profile.php?id=61585779969679" target="_blank" class="cta fb">👍 Zaobserwuj</a>
-  <a href="https://m.me/61585779969679" target="_blank" class="cta fb">💬 Napisz do nas</a>
+  <a href="https://www.facebook.com/profile.php?id=61585779969679"
+     target="_blank" class="cta fb">👍 Zaobserwuj</a>
+
+  <a href="https://m.me/61585779969679"
+     target="_blank" class="cta fb">💬 Napisz do nas</a>
 </div>
 </section>
 
+<!-- STOPKA -->
 <footer>
 <p>
 <a href="tel:721440791">📞 721 440 791</a><br>
 <a href="tel:533844331">📞 533 844 331</a>
 </p>
-<p><a href="mailto:nadbertmeble@gmail.com">✉️ nadbertmeble@gmail.com</a></p>
+<p>
+<a href="mailto:nadbertmeble@gmail.com">✉️ nadbertmeble@gmail.com</a>
+</p>
 </footer>
 
 </body>
