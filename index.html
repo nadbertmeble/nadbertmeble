@@ -15,76 +15,71 @@
       line-height: 1.6;
     }
 
+    /* HERO */
     header {
-      background: linear-gradient(135deg, #000000, #1a1a1a);
-      padding: 70px 20px;
+      position: relative;
+      padding: 140px 20px;
       text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
+        url("logo.png") center/420px no-repeat,
+        #000;
     }
 
-    header img {
-      max-width: 220px;
-      width: 100%;
-      height: auto;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: 2.3rem;
-      margin: 0 0 10px 0;
-      color: #d4af37;
-      letter-spacing: 1px;
-    }
-
-    .subtitle {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
+    .hero-text {
+      font-size: 1.25rem;
+      color: #e6e6e6;
+      margin-bottom: 45px;
+      letter-spacing: 0.5px;
     }
 
     .cta {
       display: inline-block;
       background-color: #d4af37;
       color: #000;
-      padding: 15px 32px;
+      padding: 16px 40px;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 1.05rem;
+      letter-spacing: 0.5px;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 70px 20px;
+      max-width: 1100px;
       margin: auto;
     }
 
     h2 {
       color: #d4af37;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       text-align: center;
+      letter-spacing: 0.5px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
     }
 
     .box {
       background-color: #1a1a1a;
-      padding: 22px;
-      border-radius: 6px;
+      padding: 25px;
+      border-radius: 8px;
       border: 1px solid #2a2a2a;
       text-align: center;
     }
 
     .area {
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
 
     footer {
       background-color: #000;
-      padding: 40px 20px;
+      padding: 45px 20px;
       text-align: center;
       font-size: 0.95rem;
     }
@@ -100,47 +95,46 @@
       color: #cccccc;
       margin-top: 10px;
     }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      header {
+        padding: 110px 20px;
+        background:
+          linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+          url("logo.png") center/300px no-repeat,
+          #000;
+      }
+
+      .hero-text {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-<header style="
-  position: relative;
-  padding: 140px 20px;
-  text-align: center;
-  background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-    url('logo.png') center/420px no-repeat,
-    #000;
-">
-  <div style="
-    font-size: 1.2rem;
-    color: #e6e6e6;
-    margin-bottom: 40px;
-    letter-spacing: 0.5px;
-  ">
+  <div class="hero-text">
     Skręcanie i montaż mebli u klienta<br>
     Ruda Śląska i okolice
   </div>
 
-  <a href="tel:721440791" style="
-    display: inline-block;
-    background-color: #d4af37;
-    color: #000;
-    padding: 16px 38px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 1.05rem;
-  ">
+  <a class="cta" href="tel:721440791">
     Zadzwoń: 721 440 791
   </a>
 </header>
 
-</header>
-
+<section>
+  <h2>Dlaczego warto nas wybrać?</h2>
+  <div class="grid">
+    <div class="box">2 monterów w standardzie</div>
+    <div class="box">Szybkie terminy realizacji</div>
+    <div class="box">Punktualność</div>
+    <div class="box">Czysto po montażu</div>
+  </div>
+</section>
 
 <section>
   <h2>Zakres usług</h2>
