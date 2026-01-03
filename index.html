@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Skręcanie i montaż mebli Ruda Śląska | NADBERT MEBLE</title>
-<meta name="description" content="Profesjonalne skręcanie i montaż mebli u klienta. Ruda Śląska i okolice.">
+<meta name="description" content="Profesjonalne skręcanie i montaż mebli u klienta. Ruda Śląska i okolice. Szybkie terminy, 2 monterów w standardzie.">
 
 <style>
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
@@ -46,9 +47,8 @@ body{
 /* HERO */
 header{
   position:relative;
-  padding:170px 20px 90px;
+  padding:170px 20px 100px;
   text-align:center;
-  overflow:hidden;
 }
 header::before{
   content:"";
@@ -59,10 +59,10 @@ header::before{
     radial-gradient(circle at 80% 70%, rgba(212,175,55,.18), transparent 60%),
     linear-gradient(120deg,#0a0a0a,#121212,#0a0a0a);
   background-size:200% 200%;
-  animation:moveBg 18s ease-in-out infinite;
+  animation:bgMove 18s ease-in-out infinite;
   z-index:-1;
 }
-@keyframes moveBg{
+@keyframes bgMove{
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
@@ -72,21 +72,19 @@ header::before{
   font-size:2.4rem;
   color:#d4af37;
   font-weight:bold;
-  margin-bottom:10px;
 }
 .hero-sub{
   font-size:1.2rem;
   color:#ddd;
-  margin-bottom:25px;
+  margin:15px 0 30px;
 }
 
-/* CTA */
 .cta-wrap{
   display:flex;
   gap:16px;
   justify-content:center;
   flex-wrap:wrap;
-  margin-bottom:35px;
+  margin-bottom:40px;
 }
 .cta{
   background:#d4af37;
@@ -95,35 +93,34 @@ header::before{
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
+  transition:.3s;
 }
+.cta:hover{transform:translateY(-3px)}
 .cta.fb{background:#1877f2;color:#fff}
 
 /* HERO IMAGE */
 .hero-image{
   max-width:1000px;
   margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+}
+.hero-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    #0e0e0e 0%,
+    transparent 18%,
+    transparent 82%,
+    #0e0e0e 100%
+  );
 }
 .hero-image img{
   width:100%;
-  border-radius:18px;
-  box-shadow:0 25px 70px rgba(0,0,0,.8);
-}
-
-/* DESKTOP – blend */
-@media (min-width: 769px){
-  .hero-image img{
-    background:#0e0e0e;
-    mix-blend-mode:multiply;
-  }
-}
-
-/* MOBILE – pełna czytelność */
-@media (max-width: 768px){
-  .hero-image img{
-    mix-blend-mode:normal;
-    background:#fff;
-    border:2px solid #222;
-  }
+  display:block;
 }
 
 /* SEKCJE */
@@ -132,7 +129,11 @@ section{
   margin:auto;
   padding:90px 20px;
 }
-h2{text-align:center;color:#d4af37;margin-bottom:40px}
+h2{
+  text-align:center;
+  color:#d4af37;
+  margin-bottom:40px;
+}
 
 /* GRID */
 .grid{
@@ -143,11 +144,69 @@ h2{text-align:center;color:#d4af37;margin-bottom:40px}
 .box{
   background:#151515;
   padding:30px;
-  border-radius:12px;
+  border-radius:14px;
   border:1px solid #2a2a2a;
   text-align:center;
+  transition:.4s;
 }
-.icon{font-size:2rem;margin-bottom:10px}
+.box:hover{
+  transform:translateY(-8px);
+  border-color:#d4af37;
+}
+.icon{
+  font-size:2.2rem;
+  margin-bottom:12px;
+}
+
+/* STEPS */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+}
+
+/* OPINIE */
+.review{
+  background:#121212;
+  padding:30px;
+  border-radius:14px;
+  border:1px solid #2a2a2a;
+}
+.review span{
+  color:#d4af37;
+}
+
+/* SOCIAL */
+.social{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* FLOATING BUTTONS */
+.float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:200;
+}
+.float a{
+  width:56px;height:56px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.6rem;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,.6);
+}
+.call{background:#d4af37;color:#000}
+.msg{background:#1877f2}
 
 /* FOOTER */
 footer{
@@ -156,7 +215,11 @@ footer{
   padding:45px 20px;
   border-top:1px solid #222;
 }
-footer a{color:#d4af37;text-decoration:none;font-weight:bold}
+footer a{
+  color:#d4af37;
+  text-decoration:none;
+  font-weight:bold;
+}
 
 @media(max-width:600px){
   header{padding-top:150px}
@@ -190,6 +253,53 @@ footer a{color:#d4af37;text-decoration:none;font-weight:bold}
   </div>
 </header>
 
+<section>
+<h2>Dlaczego warto nas wybrać?</h2>
+<div class="grid">
+  <div class="box"><div class="icon">👥</div>2 monterów w standardzie</div>
+  <div class="box"><div class="icon">⚡</div>Szybkie terminy</div>
+  <div class="box"><div class="icon">⏱️</div>Punktualność</div>
+  <div class="box"><div class="icon">🧹</div>Czysto po montażu</div>
+</div>
+</section>
+
+<section>
+<h2>Zakres usług</h2>
+<div class="grid">
+  <div class="box"><div class="icon">📦</div>Meble z paczek (IKEA, JYSK, Agata)</div>
+  <div class="box"><div class="icon">🚪</div>Szafy i garderoby</div>
+  <div class="box"><div class="icon">🛏️</div>Biurka, łóżka, komody</div>
+  <div class="box"><div class="icon">💪</div>Wnoszenie mebli</div>
+</div>
+</section>
+
+<section>
+<h2>Jak działamy</h2>
+<div class="steps">
+  <div class="box">📸 Wysyłasz instrukcję</div>
+  <div class="box">📅 Ustalamy termin</div>
+  <div class="box">🔧 Montujemy</div>
+  <div class="box">🧹 Zostawiamy porządek</div>
+</div>
+</section>
+
+<section>
+<h2>Opinie klientów</h2>
+<div class="grid">
+  <div class="review">⭐⭐⭐⭐⭐<br><span>„Szybko, dokładnie i czysto.”</span></div>
+  <div class="review">⭐⭐⭐⭐⭐<br><span>„Profesjonalne podejście.”</span></div>
+  <div class="review">⭐⭐⭐⭐⭐<br><span>„Polecam w 100%.”</span></div>
+</div>
+</section>
+
+<section>
+<h2>Znajdziesz nas na Facebooku</h2>
+<div class="social">
+  <a href="https://www.facebook.com/profile.php?id=61585779969679" target="_blank" class="cta fb">👍 Zaobserwuj</a>
+  <a href="https://m.me/61585779969679" target="_blank" class="cta fb">💬 Napisz</a>
+</div>
+</section>
+
 <footer>
 <p>
 <a href="tel:721440791">📞 721 440 791</a><br>
@@ -197,6 +307,11 @@ footer a{color:#d4af37;text-decoration:none;font-weight:bold}
 </p>
 <p><a href="mailto:nadbertmeble@gmail.com">✉️ nadbertmeble@gmail.com</a></p>
 </footer>
+
+<div class="float">
+  <a href="tel:721440791" class="call">📞</a>
+  <a href="https://m.me/61585779969679" class="msg">💬</a>
+</div>
 
 </body>
 </html>
