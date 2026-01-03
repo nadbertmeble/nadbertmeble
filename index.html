@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Skręcanie i montaż mebli Ruda Śląska | NADBERT MEBLE</title>
-<meta name="description" content="Profesjonalne skręcanie i montaż mebli u klienta. Ruda Śląska i okolice. Szybkie terminy, 2 monterów w standardzie.">
+<meta name="description" content="Profesjonalne skręcanie i montaż mebli u klienta. Ruda Śląska i okolice.">
 
 <style>
 *{box-sizing:border-box}
@@ -98,18 +98,32 @@ header::before{
 }
 .cta.fb{background:#1877f2;color:#fff}
 
-/* HERO IMAGE – ZLANE TŁO */
+/* HERO IMAGE */
 .hero-image{
   max-width:1000px;
   margin:0 auto;
-  position:relative;
 }
 .hero-image img{
   width:100%;
   border-radius:18px;
   box-shadow:0 25px 70px rgba(0,0,0,.8);
-  background:#0e0e0e;
-  mix-blend-mode:multiply;
+}
+
+/* DESKTOP – blend */
+@media (min-width: 769px){
+  .hero-image img{
+    background:#0e0e0e;
+    mix-blend-mode:multiply;
+  }
+}
+
+/* MOBILE – pełna czytelność */
+@media (max-width: 768px){
+  .hero-image img{
+    mix-blend-mode:normal;
+    background:#fff;
+    border:2px solid #222;
+  }
 }
 
 /* SEKCJE */
@@ -118,11 +132,7 @@ section{
   margin:auto;
   padding:90px 20px;
 }
-h2{
-  text-align:center;
-  color:#d4af37;
-  margin-bottom:40px;
-}
+h2{text-align:center;color:#d4af37;margin-bottom:40px}
 
 /* GRID */
 .grid{
@@ -136,41 +146,8 @@ h2{
   border-radius:12px;
   border:1px solid #2a2a2a;
   text-align:center;
-  transition:.3s;
 }
-.box:hover{
-  border-color:#d4af37;
-  transform:translateY(-6px);
-}
-.icon{
-  font-size:2rem;
-  margin-bottom:10px;
-}
-
-/* STEPS */
-.steps{
-  display:flex;
-  gap:20px;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-.step{
-  flex:1 1 200px;
-  background:#111;
-  padding:24px;
-  border-radius:12px;
-  border:1px solid #2a2a2a;
-  text-align:center;
-}
-
-/* SOCIAL */
-.social{
-  display:flex;
-  gap:16px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:25px;
-}
+.icon{font-size:2rem;margin-bottom:10px}
 
 /* FOOTER */
 footer{
@@ -179,16 +156,11 @@ footer{
   padding:45px 20px;
   border-top:1px solid #222;
 }
-footer a{
-  color:#d4af37;
-  text-decoration:none;
-  font-weight:bold;
-}
+footer a{color:#d4af37;text-decoration:none;font-weight:bold}
 
 @media(max-width:600px){
   header{padding-top:150px}
   .hero-title{font-size:2rem}
-  .steps{flex-direction:column}
 }
 </style>
 </head>
@@ -213,52 +185,10 @@ footer a{
     <a href="https://www.facebook.com/profile.php?id=61585779969679" target="_blank" class="cta fb">📘 Facebook</a>
   </div>
 
-  <!-- JEDNO DUŻE ZDJĘCIE -->
   <div class="hero-image">
     <img src="kafelki.png" alt="Oferta NADBERT MEBLE">
   </div>
 </header>
-
-<section>
-<h2>Dlaczego warto nas wybrać?</h2>
-<div class="grid">
-  <div class="box"><div class="icon">👥</div>2 monterów w standardzie</div>
-  <div class="box"><div class="icon">⚡</div>Szybkie terminy</div>
-  <div class="box"><div class="icon">⏱️</div>Punktualność</div>
-  <div class="box"><div class="icon">🧹</div>Czysto po montażu</div>
-</div>
-</section>
-
-<section>
-<h2>Zakres usług</h2>
-<div class="grid">
-  <div class="box"><div class="icon">📦</div>Skręcanie mebli z paczek (IKEA, JYSK, Agata)</div>
-  <div class="box"><div class="icon">🚪</div>Montaż szaf i garderób</div>
-  <div class="box"><div class="icon">🛏️</div>Montaż biurek, łóżek, komód</div>
-  <div class="box"><div class="icon">💪</div>Wnoszenie mebli</div>
-</div>
-</section>
-
-<section>
-<h2>Jak działamy</h2>
-<div class="steps">
-  <div class="step">📸 Wysyłasz instrukcję lub model mebla</div>
-  <div class="step">📅 Ustalamy termin</div>
-  <div class="step">🔧 Montujemy szybko i dokładnie</div>
-  <div class="step">🧹 Zostawiamy porządek</div>
-</div>
-</section>
-
-<section>
-<h2>Zaobserwuj nas na Facebooku</h2>
-<p style="text-align:center;max-width:700px;margin:auto;">
-Publikujemy realizacje, wolne terminy i aktualności.
-</p>
-<div class="social">
-  <a href="https://www.facebook.com/profile.php?id=61585779969679" target="_blank" class="cta fb">👍 Zaobserwuj</a>
-  <a href="https://m.me/61585779969679" target="_blank" class="cta fb">💬 Napisz do nas</a>
-</div>
-</section>
 
 <footer>
 <p>
